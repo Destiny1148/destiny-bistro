@@ -1,0 +1,544 @@
+/* =========================================================
+   LUNA BISTRO
+   MENU HANDOUT CSS
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #070807;
+  --cream: #f8f6ef;
+  --gold: #d39b22;
+  --dark-text: #181818;
+  --border: #d9d5cb;
+}
+
+/* ---------- BASIC PAGE ---------- */
+
+body {
+  background: #ffffff;
+  color: var(--dark-text);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  height: 77px;
+  margin: 0 22px;
+  padding: 0 70px;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.leaf {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 47px;
+  line-height: .7;
+  transform: rotate(-15deg);
+}
+
+.brand-name {
+  font-size: 25px;
+  letter-spacing: 4px;
+  line-height: 23px;
+}
+
+.brand-subtitle {
+  color: #ddd;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 4px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav a {
+  color: #eee;
+  text-decoration: none;
+  font: 14px Arial, sans-serif;
+  padding: 29px 0 24px;
+}
+
+.nav a:hover {
+  color: var(--gold);
+}
+
+.nav .active-link {
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+.reserve-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 13px 22px;
+  background: #e1ad36;
+  color: #111;
+  font: 14px Arial, sans-serif;
+  cursor: pointer;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  height: 205px;
+  margin: 0 22px;
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, .47), rgba(0, 0, 0, .47)),
+    url("pizza.jpg");
+
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color:white;
+  
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.hero-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.hero-line span {
+  display: block;
+  width: 64px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.hero-line b {
+  font-size: 23px;
+  font-weight: normal;
+}
+
+.hero p {
+  font: 18px Arial, sans-serif;
+}
+
+/* =========================================================
+   MENU AREA
+   ========================================================= */
+
+.menu-section {
+  background: var(--cream);
+  padding: 20px 70px 29px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 19px;
+  margin-bottom: 9px;
+}
+
+.category {
+  min-width: 105px;
+  padding: 9px 20px;
+  background: #fbfaf7;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  font: 14px Arial, sans-serif;
+  cursor: pointer;
+}
+
+.category.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.all-dishes {
+  text-align: center;
+  font-size: 34px;
+  line-height: 1.1;
+  margin-top: 5px;
+}
+
+.dish-decoration {
+  color: var(--gold);
+  text-align: center;
+  font-size: 18px;
+  margin: 2px 0 11px;
+}
+
+/* =========================================================
+   FOOD GRID
+   ========================================================= */
+
+.food-grid {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px 22px;
+}
+
+.food-card {
+  background: #fbfaf6;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.food-card img {
+  display: block;
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+}
+
+.food-details {
+  padding: 8px 15px 10px;
+}
+
+.food-details h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.food-details p {
+  min-height: 39px;
+  color: #333;
+  font: 13px/1.35 Arial, sans-serif;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.card-bottom strong {
+  font: bold 16px Arial, sans-serif;
+}
+
+.plus {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--gold);
+  color: white;
+  font: 21px Arial, sans-serif;
+  cursor: pointer;
+}
+
+/* =========================================================
+   CHEF'S RECOMMENDATION
+   ========================================================= */
+
+.recommendation {
+  min-height: 220px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  overflow: hidden;
+  background: #f1eee5;
+}
+
+.recommendation-text {
+  padding: 13px 0 12px 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.recommendation-text h2 {
+  font-size: 32px;
+  line-height: 1.02;
+  margin-bottom: 8px;
+}
+
+.gold-small-line {
+  width: 29px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 11px;
+}
+
+.recommendation-text h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.recommendation-text p {
+  font: 13px/1.35 Arial, sans-serif;
+  margin-bottom: 8px;
+}
+
+.recommend-price {
+  display: block;
+  font: bold 17px Arial, sans-serif;
+  margin-bottom: 8px;
+}
+
+.order-btn {
+  padding: 9px 23px;
+  border: none;
+  border-radius: 5px;
+  background: var(--gold);
+  color: white;
+  font: 13px Arial, sans-serif;
+  cursor: pointer;
+}
+
+.recommendation-photo {
+  height: 220px;
+}
+
+.recommendation-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50% 0 0 50%;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  min-height: 145px;
+  padding: 17px 70px 29px;
+  position: relative;
+
+  background: var(--black);
+  color: white;
+
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1.7fr .9fr;
+  gap: 30px;
+}
+
+.footer .leaf {
+  font-size: 39px;
+}
+
+.footer .brand-name {
+  font-size: 20px;
+}
+
+.footer-brand > p {
+  color: #ddd;
+  font: 11px/1.5 Arial, sans-serif;
+  margin-top: 8px;
+}
+
+.footer-column h4 {
+  font: 15px Arial, sans-serif;
+  margin-bottom: 8px;
+}
+
+.footer-column a,
+.footer-column p {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  font: 11px/1.65 Arial, sans-serif;
+}
+
+.socials {
+  display: flex;
+  gap: 13px;
+}
+
+.socials a {
+  width: 27px;
+  height: 27px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #aaa;
+  font: 11px Arial, sans-serif;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .header {
+    padding: 0 25px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .menu-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommendation {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-text {
+    padding: 30px;
+  }
+
+  .recommendation-photo {
+    height: 260px;
+  }
+
+  .recommendation-photo img {
+    border-radius: 0;
+  }
+
+  .footer {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 45px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .page-title {
+    padding-left: 12px;
+  }
+
+  .header {
+    height: auto;
+    margin: 0;
+    padding: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .nav a {
+    padding: 5px 0;
+    font-size: 12px;
+  }
+
+  .reserve-btn {
+    margin-left: auto;
+    padding: 10px 14px;
+  }
+
+  .hero {
+    height: 190px;
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .menu-section {
+    padding: 20px 15px 25px;
+  }
+
+  .categories {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .category {
+    flex: 0 0 auto;
+  }
+
+  .all-dishes {
+    font-size: 30px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-card img {
+    height: 190px;
+  }
+
+  .recommendation-text {
+    padding: 25px 20px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 25px 20px 50px;
+  }
+}

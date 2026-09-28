@@ -1,0 +1,851 @@
+:root {
+
+    --navy: #183b5b;
+    --navy-dark: #102d46;
+
+    --gold: #c5a35c;
+    --gold-light: #e1ca91;
+
+    --cream: #fbf9f4;
+
+    --white: #ffffff;
+
+    --text: #222222;
+
+    --muted: #666666;
+
+    --line: #b8b8b8;
+
+    --shadow:
+        0 12px 35px rgba(20, 35, 50, 0.10);
+}
+
+
+/* ================= RESET ================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--cream);
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.55;
+}
+
+
+/* ================= HEADER ================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding:
+        10px 6%;
+
+    background:
+        rgba(255,255,255,0.97);
+
+    border-bottom:
+        1px solid #ddd;
+
+    box-shadow:
+        0 3px 15px rgba(0,0,0,0.05);
+}
+
+
+.brand img {
+
+    width: 130px;
+
+    height: 58px;
+
+    object-fit: contain;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav a {
+
+    color: var(--navy);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+nav a:hover {
+
+    color: var(--gold);
+}
+
+
+
+/* ================= GENERAL SECTION ================= */
+
+.page-section {
+
+    width:
+        min(1050px, 94%);
+
+    margin:
+        45px auto;
+}
+
+
+
+/* ================= APPLICATION ================= */
+
+.form-card {
+
+    background: var(--white);
+
+    box-shadow: var(--shadow);
+
+    border:
+        1px solid #e2e2e2;
+
+    padding:
+        30px 7%;
+}
+
+
+.form-brand {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+
+.form-brand img {
+
+    width: 320px;
+
+    max-width: 85%;
+
+    height: 150px;
+
+    object-fit: contain;
+}
+
+
+
+/* ================= TITLE ================= */
+
+.title-block {
+
+    text-align: center;
+
+    border-top:
+        2px solid #aaa;
+
+    border-bottom:
+        2px solid #aaa;
+
+    padding:
+        15px 5px 17px;
+
+    margin-bottom: 55px;
+}
+
+
+.title-block h1 {
+
+    color: #263d55;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(22px, 3vw, 34px);
+
+    letter-spacing:
+        0.5px;
+
+    margin-bottom: 9px;
+}
+
+
+.title-block p {
+
+    color: #444;
+
+    font-size: 14px;
+
+    font-style: italic;
+}
+
+
+
+/* ================= SECTION HEADINGS ================= */
+
+.section-heading {
+
+    color: var(--navy);
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+
+    border-bottom:
+        2px solid #aaa;
+
+    padding-bottom: 8px;
+
+    margin:
+        30px 0 24px;
+}
+
+
+.section-heading span {
+
+    margin-right: 8px;
+}
+
+
+
+/* ================= FORM FIELDS ================= */
+
+.field {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 16px 0;
+
+    min-height: 35px;
+}
+
+
+.field.full {
+
+    width: 100%;
+}
+
+
+.field label:first-child,
+.field-label {
+
+    white-space: nowrap;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+.field input[type="text"],
+.field input[type="date"],
+.field input[type="tel"],
+.field input[type="email"] {
+
+    flex: 1;
+
+    min-width: 80px;
+
+    border: 0;
+
+    border-bottom:
+        2px solid var(--line);
+
+    outline: none;
+
+    background: transparent;
+
+    padding:
+        5px 4px;
+
+    font-size: 16px;
+}
+
+
+.field input:focus {
+
+    border-bottom-color:
+        var(--navy);
+}
+
+
+
+/* ================= GENDER ================= */
+
+.gender-field {
+
+    flex-wrap: wrap;
+}
+
+
+.gender-field label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+
+    width: 18px;
+
+    height: 18px;
+
+    accent-color:
+        var(--navy);
+}
+
+
+
+/* ================= POSITIONS ================= */
+
+.positions {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    column-gap: 70px;
+
+    row-gap: 18px;
+}
+
+
+.positions label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 16px;
+}
+
+
+.other-position {
+
+    grid-column:
+        1 / -1;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+
+.other-input {
+
+    border: 0;
+
+    border-bottom:
+        2px solid var(--line);
+
+    outline: none;
+
+    min-width: 260px;
+
+    padding: 4px;
+
+    font-size: 16px;
+}
+
+
+
+/* ================= BUTTONS ================= */
+
+.form-actions {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 4px;
+
+    background:
+        var(--navy);
+
+    color: white;
+
+    padding:
+        13px 24px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+
+    background:
+        var(--navy-dark);
+}
+
+
+button.secondary {
+
+    background: #777;
+}
+
+
+
+/* ================= FORM MESSAGE ================= */
+
+.form-message {
+
+    margin-top: 14px;
+
+    color:
+        var(--navy);
+
+    font-weight: 700;
+}
+
+
+
+/* ================= POLICY ================= */
+
+.policy-section {
+
+    margin-top: 70px;
+}
+
+
+.policy-card {
+
+    background:
+        var(--white);
+
+    box-shadow:
+        var(--shadow);
+
+    border:
+        1px solid #e2e2e2;
+
+    padding:
+        55px 8%;
+}
+
+
+
+/* ================= POLICY HEADER ================= */
+
+.policy-header {
+
+    text-align: center;
+
+    padding-bottom: 28px;
+
+    border-bottom:
+        2px solid #aaa;
+
+    margin-bottom: 35px;
+}
+
+
+.policy-header img {
+
+    width: 300px;
+
+    max-width: 85%;
+
+    height: 130px;
+
+    object-fit: contain;
+}
+
+
+.policy-header h2 {
+
+    color:
+        var(--navy);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(24px, 3vw, 34px);
+
+    margin-top: 8px;
+}
+
+
+.policy-header p {
+
+    color:
+        var(--gold);
+
+    font-weight: 700;
+
+    margin-top: 6px;
+}
+
+
+
+/* ================= POLICY ARTICLES ================= */
+
+article {
+
+    margin-bottom: 28px;
+}
+
+
+article h3 {
+
+    color:
+        var(--navy);
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+article p {
+
+    margin-bottom: 9px;
+}
+
+
+article ul {
+
+    padding-left: 25px;
+}
+
+
+article li {
+
+    margin: 5px 0;
+}
+
+
+
+/* ================= SIGNATURE ================= */
+
+.signature-area {
+
+    margin-top: 45px;
+
+    border-top:
+        2px solid #aaa;
+
+    padding-top: 25px;
+
+    display: grid;
+
+    gap: 18px;
+}
+
+
+.signature-area div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.signature-area span {
+
+    min-width: 130px;
+
+    font-weight: 700;
+}
+
+
+.signature-area input {
+
+    flex: 1;
+
+    border: 0;
+
+    border-bottom:
+        2px solid var(--line);
+
+    outline: none;
+
+    padding: 5px;
+}
+
+
+
+/* ================= POLICY FOOTER ================= */
+
+.policy-footer {
+
+    text-align: center;
+
+    color:
+        var(--navy);
+
+    font-weight: 800;
+
+    font-size: 18px;
+
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid #ddd;
+}
+
+
+
+/* ================= WEBSITE FOOTER ================= */
+
+footer {
+
+    text-align: center;
+
+    background:
+        var(--navy-dark);
+
+    color: white;
+
+    padding: 22px;
+
+    margin-top: 60px;
+
+    font-size: 14px;
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .site-header {
+
+        padding:
+            8px 4%;
+    }
+
+
+    .brand img {
+
+        width: 100px;
+    }
+
+
+    nav {
+
+        gap: 12px;
+
+        font-size: 13px;
+    }
+
+
+    .page-section {
+
+        width: 96%;
+
+        margin: 25px auto;
+    }
+
+
+    .form-card,
+    .policy-card {
+
+        padding:
+            25px 5%;
+    }
+
+
+    .form-brand img {
+
+        height: 110px;
+    }
+
+
+    .title-block {
+
+        margin-bottom: 35px;
+    }
+
+
+    .field {
+
+        align-items:
+            flex-start;
+
+        flex-wrap: wrap;
+    }
+
+
+    .field.full {
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 4px;
+    }
+
+
+    .gender-field {
+
+        display: flex;
+
+        align-items: center;
+    }
+
+
+    .positions {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 15px;
+    }
+
+
+    .other-position {
+
+        grid-column: auto;
+    }
+
+
+    .other-input {
+
+        min-width: 160px;
+
+        flex: 1;
+    }
+
+
+    .form-actions {
+
+        flex-direction:
+            column;
+    }
+
+
+    button {
+
+        width: 100%;
+    }
+
+
+    .signature-area div {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap: 4px;
+    }
+
+
+    .signature-area input {
+
+        width: 100%;
+    }
+
+}
+
+
+
+/* ================= PRINT ================= */
+
+@media print {
+
+    .site-header,
+    .form-actions,
+    footer {
+
+        display: none;
+    }
+
+
+    body {
+
+        background: white;
+    }
+
+
+    .page-section {
+
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    .form-card,
+    .policy-card {
+
+        box-shadow: none;
+
+        border: 0;
+    }
+
+}
